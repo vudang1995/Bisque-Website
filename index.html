@@ -7,7 +7,7 @@
 <meta name="description" content="Bisque is a nail atelier built around restraint, precision and calm — a sanctuary for the hands in the middle of the city.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,400;1,9..144,500&family=Karla:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,400;1,9..144,500&family=Karla:wght@300;400;500&family=Italiana&display=swap" rel="stylesheet">
 <style>
   :root{
     --ivory:#F6F1E7;
@@ -124,15 +124,21 @@
     border-color:var(--line);
   }
   header.site .wrap{
-    display:flex; align-items:center; justify-content:space-between;
+    display:flex; align-items:center; justify-content:flex-end;
+    position:relative;
   }
   .logo{
     display:flex; align-items:center; gap:10px;
-    font-family:'Fraunces', serif;
-    font-size:1.15rem;
-    letter-spacing:0.02em;
+    font-family:'Italiana', serif;
+    font-size:1.5rem;
+    letter-spacing:0.06em;
     color:var(--ivory);
     transition:color .5s var(--ease);
+    white-space:nowrap;
+  }
+  header.site .logo{
+    position:absolute; left:50%; top:50%;
+    transform:translate(-50%, -50%);
   }
   header.site.solid .logo{ color:var(--charcoal); }
   .logo svg{ width:22px; height:22px; display:block; }
@@ -526,7 +532,6 @@
 <header class="site" id="siteHeader">
   <div class="wrap">
     <a href="#" class="logo">
-      <svg viewBox="0 0 24 24" fill="none"><path d="M12 2C12 2 5 9 5 14a7 7 0 0 0 14 0c0-5-7-12-7-12Z" stroke-width="1.1"/><path d="M12 8v13" stroke-width="1.1"/></svg>
       Bisque
     </a>
     <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
@@ -534,10 +539,10 @@
     </button>
     <nav class="links" id="navLinks">
       <a class="nav-link" href="#services">Services</a>
-      <a class="nav-link" href="#menu">Menu &amp; Pricing</a>
+      <a class="nav-link" href="#menu">Menu</a>
       <a class="nav-link" href="#space">The Space</a>
       <a class="nav-link" href="#gallery">Gallery</a>
-      <a class="nav-link btn" href="#booking">Reserve <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.4"/></svg></a>
+      <a class="nav-link btn" href="https://princessnaillashspa.com/RequestAppt" target="_blank" rel="noopener">Reserve <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.4"/></svg></a>
     </nav>
   </div>
 </header>
@@ -545,11 +550,11 @@
 <section class="hero">
   <div class="ph ph-dark" data-caption="Bisque — the atelier, first light"></div>
   <div class="hero-content wrap">
-    <span class="eyebrow">Bisque Nail Atelier</span>
+    <span class="eyebrow">Bisque Nail Lounge</span>
     <h1>A quiet ritual <em>for the hands.</em></h1>
     <p class="sub">A small atelier built around restraint, precision and calm — where the care given to your hands matches the care given to the room around you.</p>
     <div class="cta-row">
-      <a href="#booking" class="btn">Reserve a visit
+      <a href="https://princessnaillashspa.com/RequestAppt" target="_blank" rel="noopener" class="btn">Reserve a visit
         <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.4"/></svg>
       </a>
     </div>
@@ -619,7 +624,7 @@
 <section class="full-menu section-pad" id="menu">
   <div class="wrap">
     <div class="service-head reveal">
-      <h2>Menu &amp; pricing</h2>
+      <h2>Menu</h2>
       <p class="desc">Every treatment includes regular polish or a buff shine unless noted. Add-ons and finishes are listed at the end of each group.</p>
     </div>
 
@@ -838,7 +843,7 @@
       <h2>Reserve a quiet hour for your hands.</h2>
       <p class="fine">Appointments are limited by design, to keep the room unhurried. Book ahead to secure your preferred time.</p>
       <div class="cta-row">
-        <a href="#" class="btn">Book an appointment
+        <a href="https://princessnaillashspa.com/RequestAppt" target="_blank" rel="noopener" class="btn">Book an appointment
           <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.4"/></svg>
         </a>
       </div>
@@ -851,7 +856,6 @@
     <div class="footer-top">
       <div class="footer-brand">
         <div class="logo">
-          <svg viewBox="0 0 24 24" fill="none" width="22" height="22"><path d="M12 2C12 2 5 9 5 14a7 7 0 0 0 14 0c0-5-7-12-7-12Z" stroke-width="1.1"/><path d="M12 8v13" stroke-width="1.1"/></svg>
           Bisque
         </div>
         <p>A nail atelier built around restraint, precision and calm.</p>
@@ -863,7 +867,7 @@
         <a href="tel:+14694993805">(469) 499-3805</a>
       </div>
       <div class="footer-col">
-        <h4>Atelier</h4>
+        <h4>Lounge</h4>
         <a href="#services">Services</a>
         <a href="#space">The Space</a>
         <a href="#gallery">Gallery</a>
@@ -872,11 +876,11 @@
         <h4>Connect</h4>
         <a href="#">Instagram</a>
         <a href="#">Contact</a>
-        <a href="#booking">Reserve</a>
+        <a href="https://princessnaillashspa.com/RequestAppt" target="_blank" rel="noopener">Reserve</a>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 Bisque Nail Atelier</span>
+      <span>© 2026 Bisque Nail Lounge</span>
       <span>Designed with restraint</span>
     </div>
   </div>
