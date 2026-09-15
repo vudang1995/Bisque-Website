@@ -194,9 +194,13 @@
     align-items:flex-end;
     color:var(--ivory);
   }
-  .hero .ph{
-    position:absolute; inset:0;
-    animation:kenburns 26s ease-in-out infinite alternate;
+  .hero .ph {
+  position: absolute;
+  inset: 0;
+  background-image: url('storefront.JPG');
+  background-size: cover;
+  background-position: center;
+  animation: kenburns 26s ease-in-out infinite alternate;
   }
   @keyframes kenburns{
     from{ transform:scale(1); }
@@ -533,7 +537,6 @@
 <header class="site" id="siteHeader">
   <div class="wrap">
     <a href="#" class="logo" style="letter-spacing: 0.25em;">BISQUE</a>
-    </a>
     <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -548,7 +551,7 @@
 </header>
 
 <section class="hero">
-  <div class="ph ph-dark" data-caption="Bisque — the atelier, first light"></div>
+<div class="ph" data-caption="Bisque — the storefront" style="background-image: url('storefront.JPG'); background-size: cover; background-position: center;"></div>
   <div class="hero-content wrap">
     <span class="eyebrow">Bisque Nail Lounge</span>
     <h1>A quiet ritual <em>for the hands.</em></h1>
