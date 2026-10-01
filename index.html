@@ -525,23 +525,30 @@
     .footer-top{ grid-template-columns:1fr; }
     .footer-brand{ grid-column:span 1; }
   }
-  /* ---------- Side-by-Side Hero Sub Row ---------- */
+  /* ---------- Side-by-Side Hero Sub Row (White Container) ---------- */
 .hero-sub-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 40px;
+  gap: 36px;
   margin: 30px 0;
-  padding: 24px 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.08);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 32px;
+  
+  /* White Card Background & High Visibility */
+  background-color: rgba(255, 255, 255, 0.92); /* Solid white with soft translucency */
+  backdrop-filter: blur(8px); /* Blurs background image behind card */
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Soft floating shadow */
 }
 
 .hero-sub-row .sub {
   flex: 1;
-  max-width: 320px;
+  max-width: 300px;
   margin: 0;
   line-height: 1.6;
+  color: #2c2825; /* Dark brown for crisp readability */
+  font-size: 0.95rem;
 }
 
 .hero-sub-row .info-grid {
@@ -560,30 +567,32 @@
 
 .hero-sub-row .info-col h4 {
   font-size: 0.85rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #2c2825;
+  color: #1a1816;
   margin-bottom: 6px;
 }
 
 .hero-sub-row .info-col .underline {
   width: 36px;
   height: 2px;
-  background-color: #2c2825;
+  background-color: #1a1816;
   margin-bottom: 12px;
 }
 
 .hero-sub-row .info-col p {
-  font-size: 0.85rem;
-  color: #4a443f;
+  font-size: 0.88rem;
+  color: #332f2c;
   line-height: 1.5;
   margin: 0 0 4px 0;
+  font-weight: 500;
 }
 
 .hero-sub-row .info-link {
-  color: inherit;
+  color: #1a1816;
   text-decoration: none;
+  font-weight: 600;
   transition: color 0.2s ease;
 }
 
@@ -592,12 +601,13 @@
   text-decoration: underline;
 }
 
-/* Stacks vertically on smaller screens/mobile */
+/* Stacks vertically on smaller mobile screens */
 @media (max-width: 992px) {
   .hero-sub-row {
     flex-direction: column;
     align-items: flex-start;
-    gap: 32px;
+    gap: 28px;
+    padding: 24px;
   }
   .hero-sub-row .sub {
     max-width: 100%;
@@ -605,7 +615,7 @@
   .hero-sub-row .info-grid {
     width: 100%;
     grid-template-columns: 1fr;
-    gap: 28px;
+    gap: 24px;
   }
 }
 </style>
@@ -683,7 +693,7 @@
   <div class="scroll-cue"><span>Scroll</span><span class="line"></span></div>
 </section>
 
-<section class="philosophy section-pad">
+<!-- <section class="philosophy section-pad">
   <div class="wrap">
     <div class="inner reveal">
       <span class="eyebrow">Our Philosophy</span>
@@ -691,7 +701,7 @@
       <p class="fine">Bisque was founded on a simple premise: that the hands deserve the same consideration as any other part of a considered life. Every surface, tool and gesture in the atelier is chosen with that in mind — nothing added that does not serve the work.</p>
     </div>
   </div>
-</section>
+</section> -->
 
 <section class="services section-pad" id="services">
   <div class="wrap">
@@ -896,7 +906,7 @@
   </div>
 </section> -->
 
-<section class="experience section-pad" id="experience">
+<!-- <section class="experience section-pad" id="experience">
   <div class="wrap">
     <div class="exp-top reveal">
       <span class="eyebrow">The Experience</span>
@@ -920,7 +930,7 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 <!-- <section class="gallery section-pad" id="gallery">
   <div class="wrap">
@@ -988,13 +998,13 @@
         <p>Ste 400, McKinney, TX 75071</p>
         <a href="tel:+14694993805">(469) 499-3805</a>
       </div>
-     <!-- <div class="footer-col">
+      <div class="footer-col">
         <h4>Lounge</h4>
         <a href="#services">Services</a>
         <a href="#space">The Space</a>
         <a href="#gallery">Gallery</a>
       </div>
-      <div class="footer-col"> -->
+      <div class="footer-col">
         <h4>Connect</h4>
         <a href="#">Instagram</a>
         <a href="#">Contact</a>
