@@ -525,38 +525,27 @@
     .footer-top{ grid-template-columns:1fr; }
     .footer-brand{ grid-column:span 1; }
   }
-  /* ---------- Side-by-Side Hero Sub Row (White Container) ---------- */
+  /* ---------- Centered White Box Container ---------- */
 .hero-sub-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 36px;
-  margin: 30px 0;
-  padding: 32px;
+  width: 100%;
+  max-width: 1100px;
+  margin: 32px auto;
+  padding: 32px 24px;
   
-  /* White Card Background & High Visibility */
-  background-color: rgba(255, 255, 255, 0.92); /* Solid white with soft translucency */
-  backdrop-filter: blur(8px); /* Blurs background image behind card */
+  /* White Card Styling */
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
   border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.8);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Soft floating shadow */
-}
-
-.hero-sub-row .sub {
-  flex: 1;
-  max-width: 300px;
-  margin: 0;
-  line-height: 1.6;
-  color: #1a1816; /* Updated to rich, high-contrast dark black */
-  font-size: 0.95rem;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
 .hero-sub-row .info-grid {
-  flex: 2;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: 32px;
   text-align: center;
+  align-items: start;
 }
 
 .hero-sub-row .info-col {
@@ -566,7 +555,7 @@
 }
 
 .hero-sub-row .info-col h4 {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -578,13 +567,13 @@
   width: 36px;
   height: 2px;
   background-color: #1a1816;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
 .hero-sub-row .info-col p {
-  font-size: 0.88rem;
+  font-size: 0.9rem;
   color: #332f2c;
-  line-height: 1.5;
+  line-height: 1.6;
   margin: 0 0 4px 0;
   font-weight: 500;
 }
@@ -601,21 +590,14 @@
   text-decoration: underline;
 }
 
-/* Stacks vertically on smaller mobile screens */
-@media (max-width: 992px) {
+/* Responsive adjustment for mobile screens */
+@media (max-width: 768px) {
   .hero-sub-row {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 28px;
-    padding: 24px;
-  }
-  .hero-sub-row .sub {
-    max-width: 100%;
+    padding: 24px 16px;
   }
   .hero-sub-row .info-grid {
-    width: 100%;
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 28px;
   }
 }
 </style>
@@ -644,12 +626,8 @@
     <span class="eyebrow">Bisque Nail Lounge</span>
     <h1>A quiet ritual <em>for the hands.</em></h1>
     
-    <!-- Side-by-side row containing description and info bar -->
+    <!-- White Box Container for Store Info -->
     <div class="hero-sub-row">
-      <p class="sub">
-        A small atelier built around restraint, precision and calm — where the care given to your hands matches the care given to the room around you.
-      </p>
-
       <div class="info-grid">
         <!-- Contacts Column -->
         <div class="info-col">
